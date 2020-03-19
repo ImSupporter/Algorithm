@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include "BinaryTree3.h"	// Æ®¸®ÀÇ ±¸Á¶¸¦ È®ÀÎÇÏ±â À§ÇØ¼­
-#include "BinarySearchTree3.h"
+#include "BinaryTree3.c"	// íŠ¸ë¦¬ì˜ êµ¬ì¡°ë¥¼ í™•ì¸í•˜ê¸° ìœ„í•´ì„œ
+#include "BinarySearchTree3.c"
+#include "AVLRebalance.c"
 
 int main(void)
 {
@@ -19,22 +20,22 @@ int main(void)
 	BSTInsert(&avlRoot, 8);
 	BSTInsert(&avlRoot, 9);
 
-	printf("·çÆ® ³ëµå: %d \n", GetData(avlRoot));
+	printf("ë£¨íŠ¸ ë…¸ë“œ: %d \n", GetData(avlRoot));
 
 	clNode = GetLeftSubTree(avlRoot);
 	crNode = GetRightSubTree(avlRoot);
-	printf("¿ŞÂÊ1: %d, ¿À¸¥ÂÊ1: %d \n", GetData(clNode), GetData(crNode));
+	printf("ì™¼ìª½1: %d, ì˜¤ë¥¸ìª½1: %d \n", GetData(clNode), GetData(crNode));
 
 	clNode = GetLeftSubTree(clNode);
 	crNode = GetRightSubTree(crNode);
-	printf("¿ŞÂÊ2: %d, ¿À¸¥ÂÊ2: %d \n", GetData(clNode), GetData(crNode));
+	printf("ì™¼ìª½2: %d, ì˜¤ë¥¸ìª½2: %d \n", GetData(clNode), GetData(crNode));
 
 	clNode = GetLeftSubTree(clNode);
 	crNode = GetRightSubTree(crNode);
-	printf("¿ŞÂÊ3: %d, ¿À¸¥ÂÊ3: %d \n", GetData(clNode), GetData(crNode));
+	printf("ì™¼ìª½3: %d, ì˜¤ë¥¸ìª½3: %d \n", GetData(clNode), GetData(crNode));
 
 	clNode = GetLeftSubTree(clNode);
 	crNode = GetRightSubTree(crNode);
-	printf("¿ŞÂÊ4: %d, ¿À¸¥ÂÊ4: %d \n", GetData(clNode), GetData(crNode));
+	printf("ì™¼ìª½4: %d, ì˜¤ë¥¸ìª½4: %d \n", GetData(clNode), GetData(crNode));
 	return 0;
 }
