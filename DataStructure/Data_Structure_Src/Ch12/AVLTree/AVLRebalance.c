@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "BinaryTree3.h"
+#include "AVLRebalance.h"
 
 // LL È¸Àü
 BTreeNode * RotateLL(BTreeNode * bst)
